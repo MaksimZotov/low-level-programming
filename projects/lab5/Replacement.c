@@ -120,10 +120,7 @@ int replaceWords(char *configFileName, char *inputFileName, char *outputFileName
         return error(16, "Ошибка выделения памяти под curWord");
 
     while ((ch = fgetc(input)) != EOF) {
-        if (ch == findWord[i] || (ch != findWord[i] && ch == findWord[0])) {
-            if ((ch != findWord[i] && ch == findWord[0]))
-                i = 0;
-
+        if (ch == findWord[i]) {
             curWord = realloc(curWord, (i + 1) * sizeof(char));
 
             if (curWord == NULL)
@@ -138,8 +135,14 @@ int replaceWords(char *configFileName, char *inputFileName, char *outputFileName
         } else if (i != 0) {
             for (int j = 0; j < i; j++)
                 fputc(curWord[j], output);
-            fputc(ch, output);
-            i = 0;
+            if (ch != findWord[0]) {
+                fputc(ch, output);
+                i = 0;
+            } else {
+                curWord = realloc(curWord, sizeof(char));
+                curWord[0] = ch;
+                i = 1;
+            }
         } else {
             fputc(ch, output);
             i = 0;
