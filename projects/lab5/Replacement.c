@@ -117,14 +117,14 @@ int replaceWords(char *configFileName, char *inputFileName, char *outputFileName
     char *curWord = (char *)malloc(0);
 
     if (curWord == NULL)
-        return error(15, "Ошибка выделения памяти под curWord");
+        return error(16, "Ошибка выделения памяти под curWord");
 
     while ((ch = fgetc(input)) != EOF) {
         if (ch == findWord[i]) {
             curWord = realloc(curWord, (i + 1) * sizeof(char));
 
             if (curWord == NULL)
-                return error(15, "Ошибка перераспределения памяти под curWord");
+                return error(17, "Ошибка перераспределения памяти под curWord");
 
             curWord[i] = ch;
             if (i == sizeFindWord - 1) {
