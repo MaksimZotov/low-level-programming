@@ -3,9 +3,9 @@
 #include "tests/test.h"
 
 int main(int argc, char *args[]) {
-    // doTests();
-
     SetConsoleOutputCP(CP_UTF8);
+
+    //doTests();
 
     if (argcIsCorrect(argc) == 1)
         return 1;
