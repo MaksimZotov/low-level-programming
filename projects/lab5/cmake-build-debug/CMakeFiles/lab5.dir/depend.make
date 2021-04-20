@@ -5,4 +5,8 @@ CMakeFiles\lab5.dir\Replacement.c.obj: ..\Replacement.c
 
 CMakeFiles\lab5.dir\main.c.obj: ..\Replacement.h
 CMakeFiles\lab5.dir\main.c.obj: ..\main.c
+CMakeFiles\lab5.dir\main.c.obj: ..\tests\test.h
+
+CMakeFiles\lab5.dir\tests\test.c.obj: ..\Replacement.h
+CMakeFiles\lab5.dir\tests\test.c.obj: ..\tests\test.c
 

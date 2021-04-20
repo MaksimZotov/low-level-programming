@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/Replacement.c.obj"
   "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/main.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.c.obj"
+  "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/tests/test.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/tests/test.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "MSVC")
 

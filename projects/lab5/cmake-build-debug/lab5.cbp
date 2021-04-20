@@ -91,6 +91,12 @@
 		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/main.c">
 			<Option target="lab5"/>
 		</Unit>
+		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/tests/test.c">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/tests/test.h">
+			<Option target="lab5"/>
+		</Unit>
 		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

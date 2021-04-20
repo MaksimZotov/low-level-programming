@@ -6,19 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.c
-stdio.h
--
-stdlib.h
--
-stdbool.h
--
-
 C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.h
 
-C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/main.c
-windows.h
--
-Replacement.h
+C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/tests/test.c
+../Replacement.h
 C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.h
 

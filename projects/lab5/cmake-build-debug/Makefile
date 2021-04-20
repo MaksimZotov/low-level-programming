@@ -181,6 +181,33 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\main.c.s
 .PHONY : main.c.s
 
+tests\test.obj: tests\test.c.obj
+
+.PHONY : tests\test.obj
+
+# target to build an object file
+tests\test.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\tests\test.c.obj
+.PHONY : tests\test.c.obj
+
+tests\test.i: tests\test.c.i
+
+.PHONY : tests\test.i
+
+# target to preprocess a source file
+tests\test.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\tests\test.c.i
+.PHONY : tests\test.c.i
+
+tests\test.s: tests\test.c.s
+
+.PHONY : tests\test.s
+
+# target to generate assembly for a file
+tests\test.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\tests\test.c.s
+.PHONY : tests\test.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -196,6 +223,9 @@ help:
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... tests/test.obj
+	@echo ... tests/test.i
+	@echo ... tests/test.s
 .PHONY : help
 
 

@@ -1,7 +1,10 @@
 #include <windows.h>
 #include "Replacement.h"
+#include "tests/test.h"
 
 int main(int argc, char *args[]) {
+    // doTests();
+
     SetConsoleOutputCP(CP_UTF8);
 
     if (argcIsCorrect(argc) == 1)

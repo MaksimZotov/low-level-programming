@@ -2,30 +2,42 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+int error(int number, char *msg) {
+    printf("Ошибка %d: %s", number, msg);
+    return number;
+}
+
 int argcIsCorrect(int argc) {
-    if (argc != 4) {
-        printf("Ошибка 1: Неверное количество аргументов командной строки");
-        return 1;
-    }
+    if (argc != 4)
+        return error(1, "Неверное количество аргументов командной строки");
 }
 
 int replaceWords(char *configFileName, char *inputFileName, char *outputFileName) {
     FILE *config, *input, *output;
 
     config = fopen(configFileName, "r");
-    if (config == NULL) {
-        printf("Ошибка 2: Файл конфигурации не удалось прочитать");
-        return 2;
-    }
+
+    if (config == NULL)
+        return error(2, "Файл конфигурации не удалось прочитать");
 
     char find[] = "find = \"";
     char change[] = "change = \"";
+
     int sizeFind = sizeof (find) / sizeof (char) - 1;
     int sizeChange = sizeof (change) / sizeof (char) - 1;
+
     char *findWord = (char *)malloc(0);
+
+    if (findWord == NULL)
+        return error(12, "Ошибка выделения памяти под findWord");
+
     char *changeWord = (char *)malloc(0);
-    int sizeFindWord;
-    int sizeChangeWord;
+
+    if (changeWord == NULL)
+        return error(13, "Ошибка выделения памяти под changeWord");
+
+    int sizeFindWord = -1;
+    int sizeChangeWord = -1;
 
     int i = 0;
     char ch;
@@ -35,21 +47,37 @@ int replaceWords(char *configFileName, char *inputFileName, char *outputFileName
             bool findWordIsBeingRead = (i == sizeFind - 1 && ch == find[i]);
             bool changeWordIsBeingRead = (i == sizeChange - 1 && ch == change[i]);
             if (findWordIsBeingRead || changeWordIsBeingRead) {
+                if (sizeChangeWord != -1 && sizeFindWord != -1)
+                    if (findWordIsBeingRead)
+                        return error(3, "В файле конфигурации указано более одного слова для поиска");
+                    else
+                        return error(4, "В файле конфигурации указано более одного слова для замены");
+
                 int j = 0;
                 while ((ch = fgetc(config)) != '"') {
                     if (ch == EOF) {
                         fclose(config);
                         free(findWord);
                         free(changeWord);
-                        printf("Ошибка 3: Файл конфигурации не является корректным");
-                        return 3;
+                        if (findWordIsBeingRead)
+                            return error(5, "В файле конфигурации слово для поиска не оканчивается на \"");
+                        else
+                            return error(6, "В файле конфигурации слово для замены не оканчивается на \"");
                     }
                     if (findWordIsBeingRead) {
                         findWord = realloc(findWord, (j + 1) * sizeof(char));
+
+                        if (findWord == NULL)
+                            return error(14, "Ошибка перераспределения памяти под findWord");
+
                         findWord[j] = ch;
                     }
                     else {
                         changeWord = realloc(changeWord, (j + 1) * sizeof(char));
+
+                        if (changeWord == NULL)
+                            return error(15, "Ошибка перераспределения памяти под changeWord");
+
                         changeWord[j] = ch;
                     }
                     j++;
@@ -62,24 +90,42 @@ int replaceWords(char *configFileName, char *inputFileName, char *outputFileName
 
     fclose(config);
 
-    input = fopen(inputFileName, "r");
-    if (input == NULL) {
-        printf("Ошибка 4: Файл с исходным текстом не удалось прочитать");
-        return 4;
+    bool changeWordNotFound = sizeChangeWord == -1;
+    bool findWordNotFound = sizeFindWord == -1;
+    if (changeWordNotFound || findWordNotFound) {
+        if (changeWordNotFound && findWordNotFound)
+            return error(7, "В файле конфигурации не найдено команды ни для замены, ни для поиска");
+        else if (changeWordNotFound)
+            return error(8, "В файле конфигурации не найдено команды для замены");
+        else
+            return error(9, "В файле конфигурации не найдено команды для поиска");
     }
 
+    input = fopen(inputFileName, "r");
+
+    if (input == NULL)
+        return error(10, "Файл с исходным текстом не удалось прочитать");
+
     output = fopen(outputFileName, "w");
+
     if (output == NULL) {
         fclose(input);
-        printf("Ошибка 5: Произошла ошибка при попытке работы с файлом, содержащим результат");
-        return 5;
+        return error(11, "Произошла ошибка при попытке работы с файлом, содержащим результат");
     }
 
     i = 0;
     char *curWord = (char *)malloc(0);
+
+    if (curWord == NULL)
+        return error(15, "Ошибка выделения памяти под curWord");
+
     while ((ch = fgetc(input)) != EOF) {
         if (ch == findWord[i]) {
             curWord = realloc(curWord, (i + 1) * sizeof(char));
+
+            if (curWord == NULL)
+                return error(15, "Ошибка перераспределения памяти под curWord");
+
             curWord[i] = ch;
             if (i == sizeFindWord - 1) {
                 for (int j = 0; j < sizeChangeWord; j++)

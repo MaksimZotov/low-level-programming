@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab5.dir/Replacement.c.obj"
   "CMakeFiles/lab5.dir/main.c.obj"
+  "CMakeFiles/lab5.dir/tests/test.c.obj"
   "lab5.exe"
   "lab5.exe.manifest"
   "lab5.lib"
