@@ -82,6 +82,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/ConfigChecker.c">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/ConfigChecker.h">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Error.c">
+			<Option target="lab5"/>
+		</Unit>
+		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Error.h">
+			<Option target="lab5"/>
+		</Unit>
 		<Unit filename="C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.c">
 			<Option target="lab5"/>
 		</Unit>

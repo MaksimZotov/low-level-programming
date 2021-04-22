@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/ConfigChecker.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/ConfigChecker.c.obj"
+  "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Error.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/Error.c.obj"
   "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/Replacement.c.obj"
   "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/main.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/main.c.obj"
   "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/tests/test.c" "C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/cmake-build-debug/CMakeFiles/lab5.dir/tests/test.c.obj"

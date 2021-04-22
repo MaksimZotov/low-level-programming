@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lab5.dir/ConfigChecker.c.obj"
+  "CMakeFiles/lab5.dir/Error.c.obj"
   "CMakeFiles/lab5.dir/Replacement.c.obj"
   "CMakeFiles/lab5.dir/main.c.obj"
   "CMakeFiles/lab5.dir/tests/test.c.obj"

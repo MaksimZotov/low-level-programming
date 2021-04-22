@@ -118,11 +118,51 @@ CMakeFiles\lab5.dir\tests\test.c.s: cmake_force
  /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\lab5.dir\tests\test.c.s /c C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\tests\test.c
 <<
 
+CMakeFiles\lab5.dir\ConfigChecker.c.obj: CMakeFiles\lab5.dir\flags.make
+CMakeFiles\lab5.dir\ConfigChecker.c.obj: ..\ConfigChecker.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lab5.dir/ConfigChecker.c.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\lab5.dir\ConfigChecker.c.obj /FdCMakeFiles\lab5.dir\ /FS -c C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\ConfigChecker.c
+<<
+
+CMakeFiles\lab5.dir\ConfigChecker.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab5.dir/ConfigChecker.c.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\lab5.dir\ConfigChecker.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\ConfigChecker.c
+<<
+
+CMakeFiles\lab5.dir\ConfigChecker.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab5.dir/ConfigChecker.c.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\lab5.dir\ConfigChecker.c.s /c C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\ConfigChecker.c
+<<
+
+CMakeFiles\lab5.dir\Error.c.obj: CMakeFiles\lab5.dir\flags.make
+CMakeFiles\lab5.dir\Error.c.obj: ..\Error.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lab5.dir/Error.c.obj"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoCMakeFiles\lab5.dir\Error.c.obj /FdCMakeFiles\lab5.dir\ /FS -c C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\Error.c
+<<
+
+CMakeFiles\lab5.dir\Error.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab5.dir/Error.c.i"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe > CMakeFiles\lab5.dir\Error.c.i @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\Error.c
+<<
+
+CMakeFiles\lab5.dir\Error.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab5.dir/Error.c.s"
+	C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\cl.exe @<<
+ /nologo $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) /FoNUL /FAs /FaCMakeFiles\lab5.dir\Error.c.s /c C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\Error.c
+<<
+
 # Object files for target lab5
 lab5_OBJECTS = \
 "CMakeFiles\lab5.dir\main.c.obj" \
 "CMakeFiles\lab5.dir\Replacement.c.obj" \
-"CMakeFiles\lab5.dir\tests\test.c.obj"
+"CMakeFiles\lab5.dir\tests\test.c.obj" \
+"CMakeFiles\lab5.dir\ConfigChecker.c.obj" \
+"CMakeFiles\lab5.dir\Error.c.obj"
 
 # External object files for target lab5
 lab5_EXTERNAL_OBJECTS =
@@ -130,9 +170,11 @@ lab5_EXTERNAL_OBJECTS =
 lab5.exe: CMakeFiles\lab5.dir\main.c.obj
 lab5.exe: CMakeFiles\lab5.dir\Replacement.c.obj
 lab5.exe: CMakeFiles\lab5.dir\tests\test.c.obj
+lab5.exe: CMakeFiles\lab5.dir\ConfigChecker.c.obj
+lab5.exe: CMakeFiles\lab5.dir\Error.c.obj
 lab5.exe: CMakeFiles\lab5.dir\build.make
 lab5.exe: CMakeFiles\lab5.dir\objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable lab5.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable lab5.exe"
 	"C:\Program Files\JetBrains\CLion 2020.3.2\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\lab5.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100183~1.0\x86\mt.exe --manifests  -- C:\PROGRA~2\MICROS~1\2019\COMMUN~1\VC\Tools\MSVC\1427~1.291\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\lab5.dir\objects1.rsp @<<
  /out:lab5.exe /implib:lab5.lib /pdb:C:\Users\Maksim\CLionProjects\low-level-programming\projects\lab5\cmake-build-debug\lab5.pdb /version:0.0  /machine:X86 /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib 
 <<

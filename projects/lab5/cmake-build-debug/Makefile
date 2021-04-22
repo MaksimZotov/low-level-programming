@@ -127,6 +127,60 @@ lab5\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\build
 .PHONY : lab5\fast
 
+ConfigChecker.obj: ConfigChecker.c.obj
+
+.PHONY : ConfigChecker.obj
+
+# target to build an object file
+ConfigChecker.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\ConfigChecker.c.obj
+.PHONY : ConfigChecker.c.obj
+
+ConfigChecker.i: ConfigChecker.c.i
+
+.PHONY : ConfigChecker.i
+
+# target to preprocess a source file
+ConfigChecker.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\ConfigChecker.c.i
+.PHONY : ConfigChecker.c.i
+
+ConfigChecker.s: ConfigChecker.c.s
+
+.PHONY : ConfigChecker.s
+
+# target to generate assembly for a file
+ConfigChecker.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\ConfigChecker.c.s
+.PHONY : ConfigChecker.c.s
+
+Error.obj: Error.c.obj
+
+.PHONY : Error.obj
+
+# target to build an object file
+Error.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\Error.c.obj
+.PHONY : Error.c.obj
+
+Error.i: Error.c.i
+
+.PHONY : Error.i
+
+# target to preprocess a source file
+Error.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\Error.c.i
+.PHONY : Error.c.i
+
+Error.s: Error.c.s
+
+.PHONY : Error.s
+
+# target to generate assembly for a file
+Error.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\lab5.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\lab5.dir\Error.c.s
+.PHONY : Error.c.s
+
 Replacement.obj: Replacement.c.obj
 
 .PHONY : Replacement.obj
@@ -217,6 +271,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... lab5
+	@echo ... ConfigChecker.obj
+	@echo ... ConfigChecker.i
+	@echo ... ConfigChecker.s
+	@echo ... Error.obj
+	@echo ... Error.i
+	@echo ... Error.s
 	@echo ... Replacement.obj
 	@echo ... Replacement.i
 	@echo ... Replacement.s

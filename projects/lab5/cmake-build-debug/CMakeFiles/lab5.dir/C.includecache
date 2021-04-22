@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
+C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/ConfigChecker.h
+
 C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.h
 
 C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/tests/test.c
+stdlib.h
+-
 ../Replacement.h
 C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/Replacement.h
+../ConfigChecker.h
+C:/Users/Maksim/CLionProjects/low-level-programming/projects/lab5/ConfigChecker.h
 
